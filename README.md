@@ -1,4 +1,4 @@
-#Car Sales Dashboard
+# Car Sales Dashboard
 **Overview**
 This Power BI dashboard provides comprehensive analytics for a car dealership's sales performance. Built using publicly available car sales data from Kaggle, the dashboard delivers real-time insights into key performance indicators (KPIs), sales trends, and regional performance to support data-driven decision-making.
 
