@@ -1,0 +1,33 @@
+Here are all the measures used in Power BI during the Car Sales Project:
+Calendar Table = CALENDAR(MIN(car_data[Date]), MAX( car_data[Date]))
+Month = FORMAT( 'Calendar Table'[Date], "MMMM")
+Week = WEEKNUM('Calendar Table'[Date])
+Year = YEAR('Calendar Table'[Date])
+
+Avg Price = SUM(car_data[Price ($)]) / COUNT(car_data[Car_id]) 
+Avg Price Colour = IF([Avg Price Diff]>0, "Green", "Red")
+Avg Price Diff = [YTD Avg Price] - [PYTD Avg Price] 
+Cars Sold Colour = IF(car_data[Cars Sold Diff]>0, "Green", "Red")
+Cars Sold Diff = [YTD Cars Sold] - [PYTD Cars Sold]
+
+Max Point = IF(MAXX(ALLSELECTED('Calendar Table'[Week]), [Total Sales])=[Total Sales], MAXX(ALLSELECTED('Calendar Table'[Week]), [Total Sales]) , BLANK())
+MTD Avg Price = TOTALMTD([Avg Price], 'Calendar Table'[Date])
+MTD Avg Price KPI = CONCATENATE("MTD Avg Price : ", FORMAT([MTD Avg Price] / 1000,"$0.00k"))
+MTD Cars Sold = TOTALMTD(COUNT(car_data[Car_id]),'Calendar Table'[Date])
+MTD Cars Sold KPI = CONCATENATE("MTD Cars Sold : ",FORMAT([MTD Cars Sold] / 1000, "$0.00k"))
+MTD KPI = CONCATENATE("MTD Total Sales : ", FORMAT([MTM Total Sales] / 1000000,"$0.00M"))
+MTM Total Sales = TOTALMTD(SUM(car_data[Price ($)]), 'Calendar Table'[Date])
+
+PYTD Avg Price = CALCULATE([Avg Price], SAMEPERIODLASTYEAR('Calendar Table'[Date])) 
+PYTD Cars Sold = CALCULATE(COUNT(car_data[Car_id]),SAMEPERIODLASTYEAR('Calendar Table'[Date]))
+PYTD Total Sales = CALCULATE(SUM(car_data[Price ($)] ),SAMEPERIODLASTYEAR('Calendar Table'[Date]))
+Sales Diff Colour = IF([Sales Difference]>0, "Green"," Red")
+Sales Difference = [YTD Total Sales] - [PYTD Total Sales]
+Total Sales = Sum(car_data[Price ($)])
+
+YoY Avg Price Growth = [Avg Price Diff] / [PYTD Avg Price] 
+YoY Car Sold Growth = [Cars Sold Diff] / [YTD Cars Sold]
+YoY Sales Growth = [Sales Difference] / [PYTD Total Sales]
+YTD Avg Price = TOTALYTD([Avg Price] , 'Calendar Table'[Date] )
+YTD Cars Sold = TOTALYTD(COUNT(car_data[Car_id]),'Calendar Table'[Date])
+YTD Total Sales = TOTALYTD(SUM(car_data[Price ($)]),'Calendar Table'[Date])
