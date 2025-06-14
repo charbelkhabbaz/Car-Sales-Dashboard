@@ -15,21 +15,21 @@ In this project, I gained hands-on experience in data cleaning directly within P
 
 🔹 Key Performance Indicators (KPIs):
 
-Sales Overview
-Year-to-Date (YTD) Total Sales: $70.8M (sample)
-Month-to-Date (MTD) Total Sales
-Year-over-Year (YoY) Growth in Total Sales: 23.59%
-Difference between YTD and Previous Year-to-Date (PYTD) Sales
-Average Price Analysis
-YTD Average Price: $28.0K (sample)
-MTD Average Price
-YoY Growth in Average Price: -0.79%
-Difference between YTD and PYTD Average Price
-Cars Sold Metrics
-YTD Cars Sold: 13.3K (sample)
-MTD Cars Sold
-YoY Growth in Cars Sold: 19.73%
-Difference between YTD and PYTD Cars Sold: 2.63K
+- Sales Overview
+- Year-to-Date (YTD) Total Sales: $70.8M (sample)
+- Month-to-Date (MTD) Total Sales
+- Year-over-Year (YoY) Growth in Total Sales: 23.59%
+- Difference between YTD and Previous Year-to-Date (PYTD) Sales
+- Average Price Analysis
+- YTD Average Price: $28.0K (sample)
+- MTD Average Price
+- YoY Growth in Average Price: -0.79%
+- Difference between YTD and PYTD Average Price
+- Cars Sold Metrics
+- YTD Cars Sold: 13.3K (sample)
+- MTD Cars Sold
+- YoY Growth in Cars Sold: 19.73%
+- Difference between YTD and PYTD Cars Sold: 2.63K
 
 **Visualizations**
 
