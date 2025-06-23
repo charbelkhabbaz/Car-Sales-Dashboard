@@ -10,6 +10,8 @@ In this project, I gained hands-on experience in data cleaning directly within P
 
 2- Open the Power BI project file: CarsSalesDashboard.pbix.
 
+3- Go to Transform Data and update the file path to correctly point to the Excel data source on your local machine.
+
 **Features**
 
 🔹 Key Performance Indicators (KPIs):
